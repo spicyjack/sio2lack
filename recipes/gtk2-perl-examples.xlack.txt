@@ -1,0 +1,89 @@
+# $Id: generate_recipe.sh,v 1.8 2009-07-31 23:47:23 brian Exp $
+# description: example package with comments
+# depends: _base otherpackage1 otherpackage2
+# helpcommand: /usr/bin/somebin --help
+# versioncommand: /usr/bin/somebin --version
+# examplecommand: /usr/bin/somebin -x -y -z 10
+#
+# dir <name> <mode> <uid> <gid>
+# file <name> <source> <mode> <uid> <gid>
+# slink <new name> <original file> <mode> <uid> <gid>
+#
+# 
+dir /home/lack/gtk2-perl-demos 755 1000 1000
+dir /home/lack/gtk2-perl-demos/gtk-demo 755 1000 1000
+dir /home/lack/gtk2-perl-demos/examples 755 1000 1000
+# files
+file /home/lack/gtk2-perl-demos/gtk-demo/floppybuddy.gif :LACK_WORK_DIR:/perl-Gtk2/gtk-demo/floppybuddy.gif 644 1000 1000
+file /home/lack/gtk2-perl-demos/gtk-demo/stock_browser.pl :LACK_WORK_DIR:/perl-Gtk2/gtk-demo/stock_browser.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/gtk-demo/menus.pl :LACK_WORK_DIR:/perl-Gtk2/gtk-demo/menus.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/gtk-demo/textview.pl :LACK_WORK_DIR:/perl-Gtk2/gtk-demo/textview.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/gtk-demo/gnome-gsame.png :LACK_WORK_DIR:/perl-Gtk2/gtk-demo/gnome-gsame.png 644 1000 1000
+file /home/lack/gtk2-perl-demos/gtk-demo/rotated_text.pl :LACK_WORK_DIR:/perl-Gtk2/gtk-demo/rotated_text.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/gtk-demo/editable_cells.pl :LACK_WORK_DIR:/perl-Gtk2/gtk-demo/editable_cells.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/gtk-demo/entry_completion.pl :LACK_WORK_DIR:/perl-Gtk2/gtk-demo/entry_completion.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/gtk-demo/gnu-keys.png :LACK_WORK_DIR:/perl-Gtk2/gtk-demo/gnu-keys.png 644 1000 1000
+file /home/lack/gtk2-perl-demos/gtk-demo/ui_manager.pl :LACK_WORK_DIR:/perl-Gtk2/gtk-demo/ui_manager.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/gtk-demo/drawingarea.pl :LACK_WORK_DIR:/perl-Gtk2/gtk-demo/drawingarea.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/gtk-demo/changedisplay.pl :LACK_WORK_DIR:/perl-Gtk2/gtk-demo/changedisplay.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/gtk-demo/gtk-logo-rgb.gif :LACK_WORK_DIR:/perl-Gtk2/gtk-demo/gtk-logo-rgb.gif 644 1000 1000
+file /home/lack/gtk2-perl-demos/gtk-demo/apple-red.png :LACK_WORK_DIR:/perl-Gtk2/gtk-demo/apple-red.png 644 1000 1000
+file /home/lack/gtk2-perl-demos/gtk-demo/list_store.pl :LACK_WORK_DIR:/perl-Gtk2/gtk-demo/list_store.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/gtk-demo/sizegroup.pl :LACK_WORK_DIR:/perl-Gtk2/gtk-demo/sizegroup.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/gtk-demo/pixbufs.pl :LACK_WORK_DIR:/perl-Gtk2/gtk-demo/pixbufs.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/gtk-demo/button_box.pl :LACK_WORK_DIR:/perl-Gtk2/gtk-demo/button_box.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/gtk-demo/gnome-calendar.png :LACK_WORK_DIR:/perl-Gtk2/gtk-demo/gnome-calendar.png 644 1000 1000
+file /home/lack/gtk2-perl-demos/gtk-demo/hypertext.pl :LACK_WORK_DIR:/perl-Gtk2/gtk-demo/hypertext.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/gtk-demo/dialog.pl :LACK_WORK_DIR:/perl-Gtk2/gtk-demo/dialog.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/gtk-demo/tree_store.pl :LACK_WORK_DIR:/perl-Gtk2/gtk-demo/tree_store.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/gtk-demo/gnome-gmush.png :LACK_WORK_DIR:/perl-Gtk2/gtk-demo/gnome-gmush.png 644 1000 1000
+file /home/lack/gtk2-perl-demos/gtk-demo/main.pl :LACK_WORK_DIR:/perl-Gtk2/gtk-demo/main.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/gtk-demo/background.jpg :LACK_WORK_DIR:/perl-Gtk2/gtk-demo/background.jpg 644 1000 1000
+file /home/lack/gtk2-perl-demos/gtk-demo/gnome-foot.png :LACK_WORK_DIR:/perl-Gtk2/gtk-demo/gnome-foot.png 644 1000 1000
+file /home/lack/gtk2-perl-demos/gtk-demo/panes.pl :LACK_WORK_DIR:/perl-Gtk2/gtk-demo/panes.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/gtk-demo/gnome-gimp.png :LACK_WORK_DIR:/perl-Gtk2/gtk-demo/gnome-gimp.png 644 1000 1000
+file /home/lack/gtk2-perl-demos/gtk-demo/colorsel.pl :LACK_WORK_DIR:/perl-Gtk2/gtk-demo/colorsel.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/gtk-demo/appwindow.pl :LACK_WORK_DIR:/perl-Gtk2/gtk-demo/appwindow.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/gtk-demo/alphatest.png :LACK_WORK_DIR:/perl-Gtk2/gtk-demo/alphatest.png 644 1000 1000
+file /home/lack/gtk2-perl-demos/gtk-demo/images.pl :LACK_WORK_DIR:/perl-Gtk2/gtk-demo/images.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/gtk-demo/item_factory.pl :LACK_WORK_DIR:/perl-Gtk2/gtk-demo/item_factory.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/gtk-demo/gnome-applets.png :LACK_WORK_DIR:/perl-Gtk2/gtk-demo/gnome-applets.png 644 1000 1000
+# examples
+file /home/lack/gtk2-perl-demos/examples/customlist.pl :LACK_WORK_DIR:/perl-Gtk2/examples/customlist.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/examples/assistant.pl :LACK_WORK_DIR:/perl-Gtk2/examples/assistant.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/examples/color_list.pl :LACK_WORK_DIR:/perl-Gtk2/examples/color_list.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/examples/cairo-rendering.pl :LACK_WORK_DIR:/perl-Gtk2/examples/cairo-rendering.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/examples/socket.pl :LACK_WORK_DIR:/perl-Gtk2/examples/socket.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/examples/file_chooser.pl :LACK_WORK_DIR:/perl-Gtk2/examples/file_chooser.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/examples/buttonbox.pl :LACK_WORK_DIR:/perl-Gtk2/examples/buttonbox.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/examples/table_packing.pl :LACK_WORK_DIR:/perl-Gtk2/examples/table_packing.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/examples/cellrenderer_popup.pl :LACK_WORK_DIR:/perl-Gtk2/examples/cellrenderer_popup.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/examples/inline-images.pl :LACK_WORK_DIR:/perl-Gtk2/examples/inline-images.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/examples/plug.pl :LACK_WORK_DIR:/perl-Gtk2/examples/plug.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/examples/draw_text.pl :LACK_WORK_DIR:/perl-Gtk2/examples/draw_text.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/examples/cellrenderer_progress.pl :LACK_WORK_DIR:/perl-Gtk2/examples/cellrenderer_progress.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/examples/accel_groups.pl :LACK_WORK_DIR:/perl-Gtk2/examples/accel_groups.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/examples/color_snooper.pl :LACK_WORK_DIR:/perl-Gtk2/examples/color_snooper.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/examples/linkbutton.pl :LACK_WORK_DIR:/perl-Gtk2/examples/linkbutton.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/examples/item_factory_demo.pl :LACK_WORK_DIR:/perl-Gtk2/examples/item_factory_demo.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/examples/customrenderer.pl :LACK_WORK_DIR:/perl-Gtk2/examples/customrenderer.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/examples/timeouttest.pl :LACK_WORK_DIR:/perl-Gtk2/examples/timeouttest.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/examples/insert-text-test.pl :LACK_WORK_DIR:/perl-Gtk2/examples/insert-text-test.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/examples/rulers.pl :LACK_WORK_DIR:/perl-Gtk2/examples/rulers.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/examples/simple_menu.pl :LACK_WORK_DIR:/perl-Gtk2/examples/simple_menu.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/examples/cellrenderer_spinbutton.pl :LACK_WORK_DIR:/perl-Gtk2/examples/cellrenderer_spinbutton.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/examples/multisel.pl :LACK_WORK_DIR:/perl-Gtk2/examples/multisel.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/examples/layout.pl :LACK_WORK_DIR:/perl-Gtk2/examples/layout.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/examples/histogramplot.pl :LACK_WORK_DIR:/perl-Gtk2/examples/histogramplot.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/examples/scribble.pl :LACK_WORK_DIR:/perl-Gtk2/examples/scribble.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/examples/dialog.pl :LACK_WORK_DIR:/perl-Gtk2/examples/dialog.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/examples/attributes.pl :LACK_WORK_DIR:/perl-Gtk2/examples/attributes.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/examples/thread_usage.pl :LACK_WORK_DIR:/perl-Gtk2/examples/thread_usage.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/examples/filesel_multisel.pl :LACK_WORK_DIR:/perl-Gtk2/examples/filesel_multisel.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/examples/adding_stock_icons.pl :LACK_WORK_DIR:/perl-Gtk2/examples/adding_stock_icons.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/examples/calendar.pl :LACK_WORK_DIR:/perl-Gtk2/examples/calendar.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/examples/combo_box.pl :LACK_WORK_DIR:/perl-Gtk2/examples/combo_box.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/examples/cellrenderer_date.pl :LACK_WORK_DIR:/perl-Gtk2/examples/cellrenderer_date.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/examples/testdnd.pl :LACK_WORK_DIR:/perl-Gtk2/examples/testdnd.pl 644 1000 1000
+file /home/lack/gtk2-perl-demos/examples/simplelist.pl :LACK_WORK_DIR:/perl-Gtk2/examples/simplelist.pl 644 1000 1000
+# vi: set sw=4 ts=4 paste:

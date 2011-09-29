@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# xsession script for 'lack' user
+
+# set a black background
+/usr/bin/xsetroot -solid black -cursor_name left_ptr
+# set the image of the moon on top of it
+/usr/games/xphoon
+# start an xterm in the lower left corner of the screen
+# the below lines will have /bin/sed run against them depending on what option
+# the user uses when booting the system
+#exec flwm
+#exec windowlab
+#exec xterm +sb -geometry +0-0
+#exec perl /etc/scripts/helloworld.pl

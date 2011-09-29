@@ -1,0 +1,136 @@
+# $Id: portaboom_base.txt,v 1.10 2009-08-10 08:38:58 brian Exp $
+# dir <name> <mode> <uid> <gid>
+# file <name> <source> <mode> <uid> <gid>
+# slink <new name> <original file> <mode> <uid> <gid>
+# home directories
+# moved to _basedirs 07Jul2010
+# make sure you get busybox in each project's specific initramfs file list now
+file /bin/busybox :TEMP_DIR:/busybox-1.18.5-x86 0755 0 0
+# busybox getopt hides in /bin
+slink /usr/bin/getopt /bin/getopt 0755 0 0
+#dir /home 0755 0 0
+#dir /home/lack 0755 1000 1000
+file /home/lack/.gtkrc-2.0 :PROJECT_DIR:/etcfiles/lack.gtkrc-2.0 644 1000 1000
+dir /home/nobody 0755 65535 65535
+# /etc
+# generated files
+file /etc/issue.xlack :TEMP_DIR:/issue.xlack 0644 0 0
+file /etc/issue.nogetty :TEMP_DIR:/issue.xlack.nogetty 0644 0 0
+slink /etc/issue /etc/issue.nogetty 0644 0 0
+file /etc/hostname :TEMP_DIR:/hostname 0644 0 0
+# files sourced from lack common directory
+file /etc/group :BUILD_BASE:/common/etcfiles/group 0644 0 0
+file /etc/passwd :BUILD_BASE:/common/etcfiles/passwd 0644 0 0
+file /etc/shadow :BUILD_BASE:/common/etcfiles/shadow 0640 0 0
+file /etc/sudoers :BUILD_BASE:/common/etcfiles/sudoers 0440 0 0
+#file /etc/X11/xorg.conf :PROJECT_DIR:/etcfiles/xorg.conf 644 0 0
+file /etc/X11/xorg.conf :BUILD_BASE:/common/etcfiles/xorg.conf 644 0 0
+file /etc/X11/Xwrapper.config :BUILD_BASE:/common/etcfiles/Xwrapper.config 600 0 0
+# files sourced from the xlack sub-project directory
+file /etc/inittab :PROJECT_DIR:/etcfiles/inittab 0644 0 0
+file /etc/modules :PROJECT_DIR:/etcfiles/modules 0644 0 0
+file /etc/profile :PROJECT_DIR:/etcfiles/profile 0644 0 0
+file /etc/hosts :PROJECT_DIR:/etcfiles/hosts 0644 0 0
+#file /etc/fstab :PROJECT_DIR:/fstab 0644 0 0
+#file /etc/credits.txt :PROJECT_DIR:/credits.txt 0644 0 0
+#file /etc/release_notes.txt :PROJECT_DIR:/release_notes.txt 0644 0 0
+file /etc/sysctl.conf /etc/sysctl.conf 0644 0 0
+# xsession and xresources files
+file /home/lack/.Xresources :BUILD_BASE:/common/etcfiles/Xresources 0644 1000 100
+file /home/lack/fonttest.txt :BUILD_BASE:/common/etcfiles/fonttest.txt 0644 1000 100
+# this gets changed at runtime depending on whether or not debug is set
+file /home/lack/xsession :PROJECT_DIR:/etcfiles/xsession 0755 1000 100
+# shellinabox
+#dir /etc/shellinabox 0755 0 0
+#file /etc/shellinabox/styles.css :BUILD_BASE:/common/etcfiles/styles.css 0644 0 0
+# shellinabox certs
+dir /etc/ssl 0755 0 0
+dir /etc/ssl/certs 0755 0 0
+file /etc/ssl/certs/certificate.pem :TEMP_DIR:/certificate.pem 0644 0 0
+# system/textmenu/helper scripts
+dir /etc/scripts 0755 0 0
+file /etc/scripts/streaming.sh :BUILD_BASE:/common/scripts/streaming.sh 0755 0 0
+file /etc/scripts/setvolume.sh :BUILD_BASE:/common/scripts/setvolume.sh 0755 0 0
+file /etc/scripts/helloworld.pl :BUILD_BASE:/common/scripts/helloworld.pl 0755 0 0
+file /etc/scripts/startx.sh :BUILD_BASE:/common/scripts/startx.sh 0755 0 0
+file /etc/scripts/start_term.sh :BUILD_BASE:/common/scripts/start_term.sh 0755 0 0
+# debugging X windows
+file /bin/logstartx.sh :BUILD_BASE:/common/scripts/logstartx.sh 0755 0 0
+file /bin/logxinit.sh :BUILD_BASE:/common/scripts/logxinit.sh 0755 0 0
+#file /etc/scripts/run_mpg123.sh :PROJECT_DIR:/scripts/run_mpg123.sh 0755 0 0
+# /etc/network (directory already exists in _base)
+dir /etc/network/if-down.d 0755 0 0
+dir /etc/network/if-post-down.d 0755 0 0
+dir /etc/network/if-pre-up.d 0755 0 0
+dir /etc/network/if-up.d 0755 0 0
+dir /etc/network/run 0755 0 0
+file /etc/network/run/ifstate /etc/network/run/ifstate 0644 0 0
+# /usr/share/udhcpc for udhcpc script
+dir /usr/share/udhcpc 0755 0 0
+file /usr/share/udhcpc/default.script :BUILD_BASE:/common/scripts/simple.script 0755 0 0
+# /sbin
+file /sbin/modprobe /sbin/modprobe 0755 0 0
+file /sbin/getty /sbin/getty 0755 0 0
+# /usr/bin
+# a script that runs nslookup
+file /usr/bin/host :BUILD_BASE:/common/scripts/host.sh 0755 0 0
+# for testing installation using debootstrap
+dir /mnt/rootvol 0755 0 0
+### INITSCRIPTS
+# get the full set of init helper scripts
+dir /etc/init.d 0755 0 0
+file /etc/init.d/bb-install :BUILD_BASE:/common/initscripts/bb-install 0755 0 0
+file /etc/init.d/hostname :BUILD_BASE:/common/initscripts/hostname 0755 0 0
+file /etc/init.d/kernel-modules :BUILD_BASE:/common/initscripts/kernel-modules 0755 0 0
+file /etc/init.d/klogd :BUILD_BASE:/common/initscripts/klogd 0755 0 0
+file /etc/init.d/loadfont :BUILD_BASE:/common/initscripts/loadfont 0755 0 0
+file /etc/init.d/lvm2 :BUILD_BASE:/common/initscripts/lvm2 0755 0 0
+file /etc/init.d/miscfs :BUILD_BASE:/common/initscripts/miscfs 0755 0 0
+file /etc/init.d/mountall :BUILD_BASE:/common/initscripts/mountall 0755 0 0
+file /etc/init.d/networking :BUILD_BASE:/common/initscripts/networking 0755 0 0
+file /etc/init.d/procfs :BUILD_BASE:/common/initscripts/procfs 0755 0 0
+file /etc/init.d/remount-rootfs :BUILD_BASE:/common/initscripts/remount-rootfs 0755 0 0
+file /etc/init.d/rootvol :BUILD_BASE:/common/initscripts/rootvol 0755 0 0
+file /etc/init.d/run-program :BUILD_BASE:/common/initscripts/run-program 0755 0 0
+file /etc/init.d/shellinaboxd :BUILD_BASE:/common/initscripts/shellinaboxd 0755 0 0
+file /etc/init.d/setvolume :BUILD_BASE:/common/initscripts/setvolume 0755 0 0
+file /etc/init.d/streaming :BUILD_BASE:/common/initscripts/streaming 0755 0 0
+file /etc/init.d/syslogd :BUILD_BASE:/common/initscripts/syslogd 0755 0 0
+file /etc/init.d/sysfs :BUILD_BASE:/common/initscripts/sysfs 0755 0 0
+file /etc/init.d/thumbdev :BUILD_BASE:/common/initscripts/thumbdev 0755 0 0
+file /etc/init.d/udev :BUILD_BASE:/common/initscripts/udev 0755 0 0
+file /etc/init.d/usb-modules :BUILD_BASE:/common/initscripts/usb-modules 0755 0 0
+file /etc/init.d/xorg-setup :BUILD_BASE:/common/initscripts/xorg-setup 0755 0 0
+# start symlinks
+dir /etc/start 0755 0 0
+slink /etc/start/00loadfont /etc/init.d/loadfont 0755 0 0
+slink /etc/start/01remount-rootfs /etc/init.d/remount-rootfs 0755 0 0
+slink /etc/start/02bb-install /etc/init.d/bb-install 0755 0 0
+slink /etc/start/05procfs /etc/init.d/procfs 0755 0 0
+slink /etc/start/06sysfs /etc/init.d/sysfs 0755 0 0
+slink /etc/start/07hostname /etc/init.d/hostname 0755 0 0
+slink /etc/start/10udev /etc/init.d/udev 0755 0 0
+slink /etc/start/15syslogd /etc/init.d/syslogd 0755 0 0
+slink /etc/start/16klogd /etc/init.d/klogd 0755 0 0
+slink /etc/start/17usb-modules /etc/init.d/usb-modules 0755 0 0
+slink /etc/start/18miscfs /etc/init.d/miscfs 0755 0 0
+slink /etc/start/20kernel-modules /etc/init.d/kernel-modules 0755 0 0
+slink /etc/start/30networking /etc/init.d/networking 0755 0 0
+# this kernel-panic's QEMU
+#slink /etc/start/35mountall /etc/init.d/mountall 0755 0 0
+#slink /etc/start/70streaming /etc/init.d/streaming 0755 0 0
+slink /etc/start/80setvolume /etc/init.d/setvolume 0755 0 0
+slink /etc/start/90shellinaboxd /etc/init.d/shellinaboxd 0755 0 0
+slink /etc/start/98xorg-setup /etc/init.d/xorg-setup 0755 0 0
+#slink /etc/start/99kmod_nuke /etc/init.d/kmod_nuke 0755 0 0
+# stop symlinks
+dir /etc/stop 0755 0 0
+#slink /etc/stop/50streaming /etc/init.d/streaming 0755 0 0
+slink /etc/stop/60shellinaboxd /etc/init.d/shellinaboxd 0755 0 0
+#slink /etc/stop/70mountall /etc/init.d/mountall 0755 0 0
+slink /etc/stop/75sysfs /etc/init.d/sysfs 0755 0 0
+slink /etc/stop/89klogd /etc/init.d/klogd 0755 0 0
+slink /etc/stop/90syslogd /etc/init.d/syslogd 0755 0 0
+slink /etc/stop/99procfs /etc/init.d/procfs 0755 0 0
+# vi: set sw=4 ts=4 paste:
+# eof

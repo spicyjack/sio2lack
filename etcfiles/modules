@@ -1,0 +1,6 @@
+# modules file for initrd image
+# comments start with a # at the beginning of the line
+# don't put them anywhere else, or the whole line will get filtered
+unix
+af_packet
+#loop

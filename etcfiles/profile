@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# simple systemwide ksh-style profile file
+PATH=/bin:/sbin:/usr/bin:/usr/sbin
+ANT_FUNCTIONS="/etc/ant_functions.sh"
+PS1='[\h][\u \W]\\$ '
+export PATH ANT_FUNCTIONS PS1

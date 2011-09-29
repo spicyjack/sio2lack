@@ -1,0 +1,18 @@
+# adding the leading dash tells init to start the process with it's own
+# controlling terminal (if the option is compiled into busybox, and the
+# terminal can be controlled by the process, not always possible).  See the
+# Init Utilities menu of 'make menuconfig' in Busybox for more info
+::ctrlaltdel:/sbin/reboot
+::shutdown:/sbin/swapoff -a
+::shutdown:/bin/umount -a -r
+#::respawn:-/bin/sh /etc/scripts/runtop.sh
+#::askfirst:-/bin/sh
+::respawn:-/sbin/getty -f /etc/issue.xlack 38400 tty1
+tty2::respawn:-/sbin/getty -f /etc/issue.xlack 38400 tty2
+tty3::respawn:-/sbin/getty -f /etc/issue.xlack 38400 tty3
+tty4::respawn:-/sbin/getty -f /etc/issue.xlack 38400 tty4
+tty5::respawn:-/bin/sh /etc/scripts/startx.sh
+# need a getty in your initramfs image to use this next line; the busybox shell
+# isn't smart enough to run on a serial port
+# if there's no ttyS0, then this just continually respawns
+ttyS0::respawn:/sbin/getty -f /etc/issue.xlack -L ttyS0 9600 vt100

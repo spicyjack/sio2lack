@@ -1,0 +1,28 @@
+# $Id: generate_recipe.sh,v 1.8 2009-07-31 23:47:23 brian Exp $
+# description: example package with comments
+# depends: _base otherpackage1 otherpackage2
+# helpcommand: /usr/bin/somebin --help
+# versioncommand: /usr/bin/somebin --version
+# examplecommand: /usr/bin/somebin -x -y -z 10
+#
+# dir <name> <mode> <uid> <gid>
+# file <name> <source> <mode> <uid> <gid>
+# slink <new name> <original file> <mode> <uid> <gid>
+#
+# xfonts-base
+# /etc/X11
+dir /etc/X11/fonts 755 0 0
+dir /etc/X11/fonts/misc 755 0 0
+file /etc/X11/fonts/misc/xfonts-base.alias /etc/X11/fonts/misc/xfonts-base.alias 644 0 0
+# /usr/share/fonts
+dir /usr/share/fonts 755 0 0
+dir /usr/share/fonts/X11 755 0 0
+dir /usr/share/fonts/X11/misc 755 0 0
+file /usr/share/fonts/X11/misc/fonts.alias /usr/share/fonts/X11/misc/fonts.alias 644 0 0
+file /usr/share/fonts/X11/misc/fonts.dir /usr/share/fonts/X11/misc/fonts.dir 644 0 0
+file /usr/share/fonts/X11/misc/6x13-ISO8859-1.pcf.gz /usr/share/fonts/X11/misc/6x13-ISO8859-1.pcf.gz 644 0 0
+file /usr/share/fonts/X11/misc/7x14.pcf.gz /usr/share/fonts/X11/misc/7x14.pcf.gz 644 0 0
+file /usr/share/fonts/X11/misc/cursor.pcf.gz /usr/share/fonts/X11/misc/cursor.pcf.gz 644 0 0
+file /usr/share/fonts/X11/misc/olcursor.pcf.gz /usr/share/fonts/X11/misc/olcursor.pcf.gz 644 0 0
+# vi: set sw=4 ts=4 paste:
+# vi: set sw=4 ts=4 paste:

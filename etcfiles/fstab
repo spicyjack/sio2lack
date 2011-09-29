@@ -1,0 +1,24 @@
+# /etc/fstab: static file system information.
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+# required mounts
+proc            /proc           proc    defaults        0       0
+
+# removeable media
+/dev/sdb    /floppy     auto    noauto                 0   0
+/dev/cdrom  /cdrom      iso9660 ro,noauto              0   0
+/dev/sda1   /mnt/flash  vfat    uid=500,user,noauto         0   0
+#/dev/sdc1   /mnt/flash  vfat    uid=500,user,noauto         0   0
+
+# ramfs/tmpfs filesystems
+#binfmt_misc /proc/sys/fs/binfmt_misc binfmt_misc 0 0
+#tmpfs       /dev/shm    tmpfs       size=8m                 0   0
+
+# some suggestions for system specfic mounts
+#/dev/hda1       /boot           ext2    defaults,noauto        0       2
+#/dev/hda6       none            swap    sw              0       0
+#/dev/hdb2       none   swap     sw,loop=/dev/loop0,encryption=AES128 0  0
+#/dev/hdb3        none  xfs defaults,rw,noauto,encryption=AES128,loop=/dev/loop1,gpgkey=/etc/badkey.gpg  0   0
+#/dev/evg0/rootvol /mnt/rootvol xfs defaults,rw,noauto      0   0
+#/dev/evg0/varvol /mnt/rootvol/var xfs defaults,rw,noauto      0   0
+#/dev/evg0/usrvol /mnt/rootvol/usr xfs defaults,rw,noauto      0   0

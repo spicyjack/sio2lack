@@ -1,0 +1,38 @@
+# $Id: generate_recipe.sh,v 1.8 2009-07-31 23:47:23 brian Exp $
+# description: example package with comments
+# depends: _base otherpackage1 otherpackage2
+# helpcommand: /usr/bin/somebin --help
+# versioncommand: /usr/bin/somebin --version
+# examplecommand: /usr/bin/somebin -x -y -z 10
+#
+# dir <name> <mode> <uid> <gid>
+# file <name> <source> <mode> <uid> <gid>
+# slink <new name> <original file> <mode> <uid> <gid>
+#
+# xfonts-terminus
+# /etc/X11
+dir /etc/X11/fonts 755 0 0
+dir /etc/X11/fonts/misc 755 0 0
+file /etc/X11/fonts/misc/xfonts-terminus.alias /etc/X11/fonts/misc/xfonts-terminus.alias 644 0 0
+dir /etc/fonts 755 0 0
+dir /etc/fonts/conf.d 755 0 0
+file /etc/fonts/conf.d/50-enable-terminus.conf /etc/fonts/conf.d/50-enable-terminus.conf 644 0 0
+# /usr/share/fonts
+dir /usr/share/fonts 755 0 0
+dir /usr/share/fonts/X11 755 0 0
+dir /usr/share/fonts/X11/misc 755 0 0
+#file /usr/share/fonts/X11/misc/ter-u12b_unicode.pcf.gz /usr/share/fonts/X11/misc/ter-u12b_unicode.pcf.gz 644 0 0
+#file /usr/share/fonts/X11/misc/ter-u12n_unicode.pcf.gz /usr/share/fonts/X11/misc/ter-u12n_unicode.pcf.gz 644 0 0
+file /usr/share/fonts/X11/misc/ter-u14b_unicode.pcf.gz /usr/share/fonts/X11/misc/ter-u14b_unicode.pcf.gz 644 0 0
+file /usr/share/fonts/X11/misc/ter-u14n_unicode.pcf.gz /usr/share/fonts/X11/misc/ter-u14n_unicode.pcf.gz 644 0 0
+file /usr/share/fonts/X11/misc/ter-u16b_unicode.pcf.gz /usr/share/fonts/X11/misc/ter-u16b_unicode.pcf.gz 644 0 0
+file /usr/share/fonts/X11/misc/ter-u16n_unicode.pcf.gz /usr/share/fonts/X11/misc/ter-u16n_unicode.pcf.gz 644 0 0
+file /usr/share/fonts/X11/misc/ter-u20b_unicode.pcf.gz /usr/share/fonts/X11/misc/ter-u20b_unicode.pcf.gz 644 0 0
+file /usr/share/fonts/X11/misc/ter-u20n_unicode.pcf.gz /usr/share/fonts/X11/misc/ter-u20n_unicode.pcf.gz 644 0 0
+#file /usr/share/fonts/X11/misc/ter-u24b_unicode.pcf.gz /usr/share/fonts/X11/misc/ter-u24b_unicode.pcf.gz 644 0 0
+#file /usr/share/fonts/X11/misc/ter-u24n_unicode.pcf.gz /usr/share/fonts/X11/misc/ter-u24n_unicode.pcf.gz 644 0 0
+#file /usr/share/fonts/X11/misc/ter-u28b_unicode.pcf.gz /usr/share/fonts/X11/misc/ter-u28b_unicode.pcf.gz 644 0 0
+#file /usr/share/fonts/X11/misc/ter-u28n_unicode.pcf.gz /usr/share/fonts/X11/misc/ter-u28n_unicode.pcf.gz 644 0 0
+#file /usr/share/fonts/X11/misc/ter-u32b_unicode.pcf.gz /usr/share/fonts/X11/misc/ter-u32b_unicode.pcf.gz 644 0 0
+#file /usr/share/fonts/X11/misc/ter-u32n_unicode.pcf.gz /usr/share/fonts/X11/misc/ter-u32n_unicode.pcf.gz 644 0 0
+# vi: set sw=4 ts=4 paste:

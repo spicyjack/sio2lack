@@ -1,0 +1,735 @@
+# $Id: perl.lenny.txt,v 1.9 2009-03-12 06:03:28 brian Exp $
+# depends: _base 
+# helpcommand: /usr/bin/perl --help
+# versioncommand: /usr/bin/perl -v
+# examplecommand: /usr/bin/perl -e "print qq(Hello world!\n);"
+#
+# file <name> <source> <mode> <uid> <gid>
+# slink <new name> <original file> <mode> <uid> <gid>
+#
+# perl /usr/bin
+file /usr/bin/perl /usr/bin/perl 0755 0 0
+### /usr/lib/perl
+# perl /usr/lib/perl/5.10.0
+dir /usr/lib/perl 0755 0 0
+dir /usr/lib/perl/5.10.0 0755 0 0
+slink /usr/lib/perl/5.10 /usr/lib/perl/5.10.0 0755 0 0
+# map all scripts from /usr/lib/perl5 into /usr/lib/perl/5.10.0
+slink /usr/lib/perl5 /usr/lib/perl/5.10.0 0755 0 0
+# Core modules
+file /usr/lib/perl/5.10.0/Config.pm /usr/lib/perl/5.10.0/Config.pm 0644 0 0
+file /usr/lib/perl/5.10.0/Config_heavy.pl /usr/lib/perl/5.10.0/Config_heavy.pl 0644 0 0
+file /usr/lib/perl/5.10.0/Cwd.pm /usr/lib/perl/5.10.0/Cwd.pm 0644 0 0
+file /usr/lib/perl/5.10.0/DynaLoader.pm /usr/lib/perl/5.10.0/DynaLoader.pm 0644 0 0
+
+file /usr/lib/perl/5.10.0/Errno.pm /usr/lib/perl/5.10.0/Errno.pm 0644 0 0
+file /usr/lib/perl/5.10.0/Fcntl.pm /usr/lib/perl/5.10.0/Fcntl.pm 0644 0 0
+file /usr/lib/perl/5.10.0/lib.pm /usr/lib/perl/5.10.0/lib.pm 0644 0 0
+file /usr/lib/perl/5.10.0/XSLoader.pm /usr/lib/perl/5.10.0/XSLoader.pm 0644 0 0
+# perl /usr/lib/perl/5.10.0/auto
+dir /usr/lib/perl/5.10.0/auto 0755 0 0
+# perl /usr/lib/perl/5.10.0/auto/DynaLoader
+dir /usr/lib/perl/5.10.0/auto/DynaLoader 0755 0 0
+file /usr/lib/perl/5.10.0/auto/DynaLoader/dl_findfile.al /usr/lib/perl/5.10.0/auto/DynaLoader/dl_findfile.al 0644 0 0
+file /usr/lib/perl/5.10.0/auto/DynaLoader/dl_expandspec.al /usr/lib/perl/5.10.0/auto/DynaLoader/dl_expandspec.al 0644 0 0
+file /usr/lib/perl/5.10.0/auto/DynaLoader/dl_find_symbol_anywhere.al /usr/lib/perl/5.10.0/auto/DynaLoader/dl_find_symbol_anywhere.al 0644 0 0
+file /usr/lib/perl/5.10.0/auto/DynaLoader/autosplit.ix /usr/lib/perl/5.10.0/auto/DynaLoader/autosplit.ix 0644 0 0
+# perl /usr/lib/perl/5.10.0/auto/Encode
+dir /usr/lib/perl/5.10.0/auto/Encode 0755 0 0
+dir /usr/lib/perl/5.10.0/auto/Encode/CN 0755 0 0
+file /usr/lib/perl/5.10.0/auto/Encode/CN/CN.so /usr/lib/perl/5.10.0/auto/Encode/CN/CN.so 0644 0 0
+dir /usr/lib/perl/5.10.0/auto/Encode/JP 0755 0 0
+file /usr/lib/perl/5.10.0/auto/Encode/JP/JP.so /usr/lib/perl/5.10.0/auto/Encode/JP/JP.so 0644 0 0
+dir /usr/lib/perl/5.10.0/auto/Encode/KR 0755 0 0
+file /usr/lib/perl/5.10.0/auto/Encode/KR/KR.so /usr/lib/perl/5.10.0/auto/Encode/KR/KR.so 0644 0 0
+dir /usr/lib/perl/5.10.0/auto/Encode/TW 0755 0 0
+file /usr/lib/perl/5.10.0/auto/Encode/TW/TW.so /usr/lib/perl/5.10.0/auto/Encode/TW/TW.so 0644 0 0
+dir /usr/lib/perl/5.10.0/auto/Encode/EBCDIC 0755 0 0
+file /usr/lib/perl/5.10.0/auto/Encode/EBCDIC/EBCDIC.so /usr/lib/perl/5.10.0/auto/Encode/EBCDIC/EBCDIC.so 0644 0 0
+dir /usr/lib/perl/5.10.0/auto/Encode/Byte 0755 0 0
+file /usr/lib/perl/5.10.0/auto/Encode/Byte/Byte.so /usr/lib/perl/5.10.0/auto/Encode/Byte/Byte.so 0644 0 0
+dir /usr/lib/perl/5.10.0/auto/Encode/Symbol 0755 0 0
+file /usr/lib/perl/5.10.0/auto/Encode/Symbol/Symbol.so /usr/lib/perl/5.10.0/auto/Encode/Symbol/Symbol.so 0644 0 0
+file /usr/lib/perl/5.10.0/auto/Encode/Encode.so /usr/lib/perl/5.10.0/auto/Encode/Encode.so 0644 0 0
+dir /usr/lib/perl/5.10.0/auto/Encode/Unicode 0755 0 0
+file /usr/lib/perl/5.10.0/auto/Encode/Unicode/Unicode.so /usr/lib/perl/5.10.0/auto/Encode/Unicode/Unicode.so 0644 0 0
+# perl /usr/lib/perl/5.10.0/auto/Fcntl
+dir /usr/lib/perl/5.10.0/auto/Fcntl 0755 0 0
+file /usr/lib/perl/5.10.0/auto/Fcntl/Fcntl.so /usr/lib/perl/5.10.0/auto/Fcntl/Fcntl.so 0644 0 0
+# perl /usr/lib/perl/5.10.0/Encode
+file /usr/lib/perl/5.10.0/Encode.pm /usr/lib/perl/5.10.0/Encode.pm 0644 0 0
+dir /usr/lib/perl/5.10.0/Encode 0755 0 0
+dir /usr/lib/perl/5.10.0/Encode/CN 0755 0 0
+file /usr/lib/perl/5.10.0/Encode/CN/HZ.pm /usr/lib/perl/5.10.0/Encode/CN/HZ.pm 0644 0 0
+dir /usr/lib/perl/5.10.0/Encode/JP 0755 0 0
+file /usr/lib/perl/5.10.0/Encode/JP/H2Z.pm /usr/lib/perl/5.10.0/Encode/JP/H2Z.pm 0644 0 0
+file /usr/lib/perl/5.10.0/Encode/JP/JIS7.pm /usr/lib/perl/5.10.0/Encode/JP/JIS7.pm 0644 0 0
+dir /usr/lib/perl/5.10.0/Encode/KR 0755 0 0
+file /usr/lib/perl/5.10.0/Encode/KR/2022_KR.pm /usr/lib/perl/5.10.0/Encode/KR/2022_KR.pm 0644 0 0
+dir /usr/lib/perl/5.10.0/Encode/MIME 0755 0 0
+dir /usr/lib/perl/5.10.0/Encode/MIME/Header 0755 0 0
+file /usr/lib/perl/5.10.0/Encode/MIME/Header/ISO_2022_JP.pm /usr/lib/perl/5.10.0/Encode/MIME/Header/ISO_2022_JP.pm 0644 0 0
+file /usr/lib/perl/5.10.0/Encode/MIME/Name.pm /usr/lib/perl/5.10.0/Encode/MIME/Name.pm 0644 0 0
+file /usr/lib/perl/5.10.0/Encode/MIME/Header.pm /usr/lib/perl/5.10.0/Encode/MIME/Header.pm 0644 0 0
+file /usr/lib/perl/5.10.0/Encode/CJKConstants.pm /usr/lib/perl/5.10.0/Encode/CJKConstants.pm 0644 0 0
+file /usr/lib/perl/5.10.0/Encode/CN.pm /usr/lib/perl/5.10.0/Encode/CN.pm 0644 0 0
+file /usr/lib/perl/5.10.0/Encode/JP.pm /usr/lib/perl/5.10.0/Encode/JP.pm 0644 0 0
+file /usr/lib/perl/5.10.0/Encode/KR.pm /usr/lib/perl/5.10.0/Encode/KR.pm 0644 0 0
+file /usr/lib/perl/5.10.0/Encode/TW.pm /usr/lib/perl/5.10.0/Encode/TW.pm 0644 0 0
+file /usr/lib/perl/5.10.0/Encode/EBCDIC.pm /usr/lib/perl/5.10.0/Encode/EBCDIC.pm 0644 0 0
+file /usr/lib/perl/5.10.0/Encode/Guess.pm /usr/lib/perl/5.10.0/Encode/Guess.pm 0644 0 0
+file /usr/lib/perl/5.10.0/Encode/Byte.pm /usr/lib/perl/5.10.0/Encode/Byte.pm 0644 0 0
+file /usr/lib/perl/5.10.0/Encode/Alias.pm /usr/lib/perl/5.10.0/Encode/Alias.pm 0644 0 0
+file /usr/lib/perl/5.10.0/Encode/GSM0338.pm /usr/lib/perl/5.10.0/Encode/GSM0338.pm 0644 0 0
+file /usr/lib/perl/5.10.0/Encode/Config.pm /usr/lib/perl/5.10.0/Encode/Config.pm 0644 0 0
+file /usr/lib/perl/5.10.0/Encode/Encoder.pm /usr/lib/perl/5.10.0/Encode/Encoder.pm 0644 0 0
+file /usr/lib/perl/5.10.0/Encode/Symbol.pm /usr/lib/perl/5.10.0/Encode/Symbol.pm 0644 0 0
+file /usr/lib/perl/5.10.0/Encode/Unicode.pm /usr/lib/perl/5.10.0/Encode/Unicode.pm 0644 0 0
+dir /usr/lib/perl/5.10.0/Encode/Unicode 0755 0 0
+file /usr/lib/perl/5.10.0/Encode/Unicode/UTF7.pm /usr/lib/perl/5.10.0/Encode/Unicode/UTF7.pm 0644 0 0
+file /usr/lib/perl/5.10.0/Encode/Encoding.pm /usr/lib/perl/5.10.0/Encode/Encoding.pm 0644 0 0
+# perl /usr/lib/perl/5.10.0/List/Util
+dir /usr/lib/perl/5.10.0/List 0755 0 0
+file /usr/lib/perl/5.10.0/List/Util.pm /usr/lib/perl/5.10.0/List/Util.pm 0644 0 0
+# perl /usr/lib/perl/5.10.0/Params/Validate
+dir /usr/lib/perl/5.10.0/Params 0755 0 0
+file /usr/lib/perl/5.10.0/Params/Validate.pm /usr/lib/perl5/Params/Validate.pm 0644 0 0
+file /usr/lib/perl/5.10.0/Params/ValidatePP.pm /usr/lib/perl5/Params/ValidatePP.pm 0644 0 0
+file /usr/lib/perl/5.10.0/Params/ValidateXS.pm /usr/lib/perl5/Params/ValidateXS.pm 0644 0 0
+# perl /usr/lib/perl/5.10.0/Scalar/Util
+dir /usr/lib/perl/5.10.0/Scalar 0755 0 0
+file /usr/lib/perl/5.10.0/Scalar/Util.pm /usr/lib/perl/5.10.0/Scalar/Util.pm 0644 0 0
+# perl /usr/share/perl/5.10.0/Time
+dir /usr/lib/perl/5.10.0/Time 0755 0 0
+file /usr/lib/perl/5.10.0/Time/HiRes.pm /usr/lib/perl/5.10.0/Time/HiRes.pm 0644 0 0
+### /usr/share/perl
+# perl /usr/share/perl/5.10.0
+dir /usr/share/perl 0755 0 0
+# a lot of modules use this directory here
+dir /usr/share/perl5 0755 0 0
+dir /usr/share/perl/5.10.0 0755 0 0
+slink /usr/share/perl/5.8 /usr/share/perl/5.10.0 0755 0 0
+slink /usr/share/perl/5.10 /usr/share/perl/5.10.0 0755 0 0
+file /usr/share/perl/5.10.0/base.pm /usr/share/perl/5.10.0/base.pm 0644 0 0
+file /usr/share/perl/5.10.0/bytes.pm /usr/share/perl/5.10.0/bytes.pm 0644 0 0
+file /usr/share/perl/5.10.0/constant.pm /usr/share/perl/5.10.0/constant.pm 0644 0 0
+file /usr/share/perl/5.10.0/flush.pl /usr/share/perl/5.10.0/flush.pl 0644 0 0
+file /usr/share/perl/5.10.0/integer.pm /usr/share/perl/5.10.0/integer.pm 0644 0 0
+file /usr/share/perl/5.10.0/overload.pm /usr/share/perl/5.10.0/overload.pm 0644 0 0
+file /usr/share/perl/5.10.0/strict.pm /usr/share/perl/5.10.0/strict.pm 0644 0 0
+file /usr/share/perl/5.10.0/subs.pm /usr/share/perl/5.10.0/subs.pm 0644 0 0
+file /usr/share/perl/5.10.0/utf8.pm /usr/share/perl/5.10.0/utf8.pm 0644 0 0
+file /usr/share/perl/5.10.0/utf8_heavy.pl /usr/share/perl/5.10.0/utf8_heavy.pl 0644 0 0
+file /usr/share/perl/5.10.0/vars.pm /usr/share/perl/5.10.0/vars.pm 0644 0 0
+file /usr/share/perl/5.10.0/warnings.pm /usr/share/perl/5.10.0/warnings.pm 0644 0 0
+dir /usr/share/perl/5.10.0/warnings 0755 0 0
+file /usr/share/perl/5.10.0/warnings/register.pm /usr/share/perl/5.10.0/warnings/register.pm 0644 0 0
+file /usr/share/perl/5.10.0/AutoLoader.pm /usr/share/perl/5.10.0/AutoLoader.pm 0644 0 0
+file /usr/share/perl/5.10.0/Exporter.pm /usr/share/perl/5.10.0/Exporter.pm 0644 0 0
+file /usr/share/perl/5.10.0/Carp.pm /usr/share/perl/5.10.0/Carp.pm 0644 0 0
+dir /usr/share/perl/5.10.0/Carp 0755 0 0
+file /usr/share/perl/5.10.0/Carp/Heavy.pm /usr/share/perl/5.10.0/Carp/Heavy.pm 0644 0 0
+file /usr/share/perl/5.10.0/Symbol.pm /usr/share/perl/5.10.0/Symbol.pm 0644 0 0
+# perl /usr/share/perl/5.10.0/File
+dir /usr/share/perl/5.10.0/File 0755 0 0
+file /usr/share/perl/5.10.0/File/Find.pm /usr/share/perl/5.10.0/File/Find.pm 0644 0 0
+file /usr/share/perl/5.10.0/File/Basename.pm /usr/share/perl/5.10.0/File/Basename.pm 0644 0 0
+file /usr/share/perl/5.10.0/File/Spec.pm /usr/share/perl/5.10.0/File/Spec.pm 0644 0 0
+# perl /usr/share/perl/5.10.0/File/Spec
+dir /usr/share/perl/5.10.0/File/Spec 0755 0 0
+file /usr/share/perl/5.10.0/File/Spec/Unix.pm /usr/share/perl/5.10.0/File/Spec/Unix.pm 0644 0 0
+# perl /usr/share/perl/5.10.0/Time
+dir /usr/share/perl/5.10.0/Time 0755 0 0
+file /usr/share/perl/5.10.0/Time/Local.pm /usr/share/perl/5.10.0/Time/Local.pm 0644 0 0
+# perl /usr/share/perl/5.10.0/unicore
+dir /usr/share/perl/5.10.0/unicore 0755 0 0
+file /usr/share/perl/5.10.0/unicore/Exact.pl /usr/share/perl/5.10.0/unicore/Exact.pl 0644 0 0
+# perl-base
+dir /usr/lib/perl/5.10.0/B 0755 0 0
+file /usr/lib/perl/5.10.0/B/Deparse.pm /usr/lib/perl/5.10.0/B/Deparse.pm 0644 0 0
+dir /usr/lib/perl/5.10.0/IO 0755 0 0
+file /usr/lib/perl/5.10.0/IO/Seekable.pm /usr/lib/perl/5.10.0/IO/Seekable.pm 0644 0 0
+file /usr/lib/perl/5.10.0/IO/Pipe.pm /usr/lib/perl/5.10.0/IO/Pipe.pm 0644 0 0
+dir /usr/lib/perl/5.10.0/IO/Socket 0755 0 0
+file /usr/lib/perl/5.10.0/IO/Socket/UNIX.pm /usr/lib/perl/5.10.0/IO/Socket/UNIX.pm 0644 0 0
+file /usr/lib/perl/5.10.0/IO/Socket/INET.pm /usr/lib/perl/5.10.0/IO/Socket/INET.pm 0644 0 0
+file /usr/lib/perl/5.10.0/IO/Handle.pm /usr/lib/perl/5.10.0/IO/Handle.pm 0644 0 0
+file /usr/lib/perl/5.10.0/IO/Socket.pm /usr/lib/perl/5.10.0/IO/Socket.pm 0644 0 0
+file /usr/lib/perl/5.10.0/IO/File.pm /usr/lib/perl/5.10.0/IO/File.pm 0644 0 0
+file /usr/lib/perl/5.10.0/IO/Select.pm /usr/lib/perl/5.10.0/IO/Select.pm 0644 0 0
+file /usr/lib/perl/5.10.0/B.pm /usr/lib/perl/5.10.0/B.pm 0644 0 0
+dir /usr/lib/perl/5.10.0/File 0755 0 0
+file /usr/lib/perl/5.10.0/File/Glob.pm /usr/lib/perl/5.10.0/File/Glob.pm 0644 0 0
+dir /usr/lib/perl/5.10.0/Hash 0755 0 0
+file /usr/lib/perl/5.10.0/Hash/Util.pm /usr/lib/perl/5.10.0/Hash/Util.pm 0644 0 0
+dir /usr/lib/perl/5.10.0/List 0755 0 0
+file /usr/lib/perl/5.10.0/List/Util.pm /usr/lib/perl/5.10.0/List/Util.pm 0644 0 0
+dir /usr/lib/perl/5.10.0/auto 0755 0 0
+dir /usr/lib/perl/5.10.0/auto/IO 0755 0 0
+file /usr/lib/perl/5.10.0/auto/IO/IO.so /usr/lib/perl/5.10.0/auto/IO/IO.so 0644 0 0
+dir /usr/lib/perl/5.10.0/auto/Cwd 0755 0 0
+file /usr/lib/perl/5.10.0/auto/Cwd/Cwd.so /usr/lib/perl/5.10.0/auto/Cwd/Cwd.so 0644 0 0
+dir /usr/lib/perl/5.10.0/auto/File 0755 0 0
+dir /usr/lib/perl/5.10.0/auto/File/Glob 0755 0 0
+file /usr/lib/perl/5.10.0/auto/File/Glob/Glob.so /usr/lib/perl/5.10.0/auto/File/Glob/Glob.so 0644 0 0
+dir /usr/lib/perl/5.10.0/auto/Hash 0755 0 0
+dir /usr/lib/perl/5.10.0/auto/Hash/Util 0755 0 0
+file /usr/lib/perl/5.10.0/auto/Hash/Util/Util.so /usr/lib/perl/5.10.0/auto/Hash/Util/Util.so 0644 0 0
+dir /usr/lib/perl/5.10.0/auto/List 0755 0 0
+dir /usr/lib/perl/5.10.0/auto/List/Util 0755 0 0
+file /usr/lib/perl/5.10.0/auto/List/Util/Util.so /usr/lib/perl/5.10.0/auto/List/Util/Util.so 0644 0 0
+dir /usr/lib/perl/5.10.0/auto/Fcntl 0755 0 0
+file /usr/lib/perl/5.10.0/auto/Fcntl/Fcntl.so /usr/lib/perl/5.10.0/auto/Fcntl/Fcntl.so 0644 0 0
+dir /usr/lib/perl/5.10.0/auto/POSIX 0755 0 0
+file /usr/lib/perl/5.10.0/auto/POSIX/autosplit.ix /usr/lib/perl/5.10.0/auto/POSIX/autosplit.ix 0644 0 0
+file /usr/lib/perl/5.10.0/auto/POSIX/load_imports.al /usr/lib/perl/5.10.0/auto/POSIX/load_imports.al 0644 0 0
+file /usr/lib/perl/5.10.0/auto/POSIX/POSIX.so /usr/lib/perl/5.10.0/auto/POSIX/POSIX.so 0644 0 0
+dir /usr/lib/perl/5.10.0/auto/DynaLoader 0755 0 0
+file /usr/lib/perl/5.10.0/auto/DynaLoader/dl_find_symbol_anywhere.al /usr/lib/perl/5.10.0/auto/DynaLoader/dl_find_symbol_anywhere.al 0644 0 0
+file /usr/lib/perl/5.10.0/auto/DynaLoader/dl_expandspec.al /usr/lib/perl/5.10.0/auto/DynaLoader/dl_expandspec.al 0644 0 0
+file /usr/lib/perl/5.10.0/auto/DynaLoader/autosplit.ix /usr/lib/perl/5.10.0/auto/DynaLoader/autosplit.ix 0644 0 0
+file /usr/lib/perl/5.10.0/auto/DynaLoader/dl_findfile.al /usr/lib/perl/5.10.0/auto/DynaLoader/dl_findfile.al 0644 0 0
+dir /usr/lib/perl/5.10.0/auto/Socket 0755 0 0
+file /usr/lib/perl/5.10.0/auto/Socket/Socket.so /usr/lib/perl/5.10.0/auto/Socket/Socket.so 0644 0 0
+dir /usr/lib/perl/5.10.0/auto/Time 0755 0 0
+dir /usr/lib/perl/5.10.0/auto/Time/HiRes 0755 0 0
+file /usr/lib/perl/5.10.0/auto/Time/HiRes/HiRes.so /usr/lib/perl/5.10.0/auto/Time/HiRes/HiRes.so 0644 0 0
+# perl 
+file /usr/lib/perl/5.10.0/Cwd.pm /usr/lib/perl/5.10.0/Cwd.pm 0644 0 0
+file /usr/lib/perl/5.10.0/IO.pm /usr/lib/perl/5.10.0/IO.pm 0644 0 0
+file /usr/lib/perl/5.10.0/re.pm /usr/lib/perl/5.10.0/re.pm 0644 0 0
+dir /usr/lib/perl/5.10.0/Scalar 0755 0 0
+file /usr/lib/perl/5.10.0/Scalar/Util.pm /usr/lib/perl/5.10.0/Scalar/Util.pm 0644 0 0
+file /usr/lib/perl/5.10.0/Fcntl.pm /usr/lib/perl/5.10.0/Fcntl.pm 0644 0 0
+file /usr/lib/perl/5.10.0/XSLoader.pm /usr/lib/perl/5.10.0/XSLoader.pm 0644 0 0
+file /usr/lib/perl/5.10.0/DynaLoader.pm /usr/lib/perl/5.10.0/DynaLoader.pm 0644 0 0
+file /usr/lib/perl/5.10.0/Socket.pm /usr/lib/perl/5.10.0/Socket.pm 0644 0 0
+file /usr/lib/perl/5.10.0/lib.pm /usr/lib/perl/5.10.0/lib.pm 0644 0 0
+file /usr/lib/perl/5.10.0/Config.pm /usr/lib/perl/5.10.0/Config.pm 0644 0 0
+file /usr/lib/perl/5.10.0/Errno.pm /usr/lib/perl/5.10.0/Errno.pm 0644 0 0
+file /usr/lib/perl/5.10.0/POSIX.pm /usr/lib/perl/5.10.0/POSIX.pm 0644 0 0
+dir /usr/share/perl 0755 0 0
+dir /usr/share/perl/5.10.0 0755 0 0
+dir /usr/share/perl/5.10.0/IPC 0755 0 0
+file /usr/share/perl/5.10.0/IPC/Open2.pm /usr/share/perl/5.10.0/IPC/Open2.pm 0644 0 0
+file /usr/share/perl/5.10.0/IPC/Open3.pm /usr/share/perl/5.10.0/IPC/Open3.pm 0644 0 0
+dir /usr/share/perl/5.10.0/Tie 0755 0 0
+file /usr/share/perl/5.10.0/Tie/Hash.pm /usr/share/perl/5.10.0/Tie/Hash.pm 0644 0 0
+file /usr/share/perl/5.10.0/overload.pm /usr/share/perl/5.10.0/overload.pm 0644 0 0
+dir /usr/share/perl/5.10.0/Carp 0755 0 0
+file /usr/share/perl/5.10.0/Carp/Heavy.pm /usr/share/perl/5.10.0/Carp/Heavy.pm 0644 0 0
+dir /usr/share/perl/5.10.0/File 0755 0 0
+dir /usr/share/perl/5.10.0/File/Spec 0755 0 0
+file /usr/share/perl/5.10.0/File/Spec/Unix.pm /usr/share/perl/5.10.0/File/Spec/Unix.pm 0644 0 0
+file /usr/share/perl/5.10.0/File/Spec.pm /usr/share/perl/5.10.0/File/Spec.pm 0644 0 0
+dir /usr/share/perl/5.10.0/Text 0755 0 0
+file /usr/share/perl/5.10.0/Text/Wrap.pm /usr/share/perl/5.10.0/Text/Wrap.pm 0644 0 0
+file /usr/share/perl/5.10.0/Text/ParseWords.pm /usr/share/perl/5.10.0/Text/ParseWords.pm 0644 0 0
+file /usr/share/perl/5.10.0/Text/Tabs.pm /usr/share/perl/5.10.0/Text/Tabs.pm 0644 0 0
+file /usr/share/perl/5.10.0/warnings.pm /usr/share/perl/5.10.0/warnings.pm 0644 0 0
+file /usr/share/perl/5.10.0/constant.pm /usr/share/perl/5.10.0/constant.pm 0644 0 0
+dir /usr/share/perl/5.10.0/Getopt 0755 0 0
+file /usr/share/perl/5.10.0/Getopt/Long.pm /usr/share/perl/5.10.0/Getopt/Long.pm 0644 0 0
+file /usr/share/perl/5.10.0/fields.pm /usr/share/perl/5.10.0/fields.pm 0644 0 0
+file /usr/share/perl/5.10.0/strict.pm /usr/share/perl/5.10.0/strict.pm 0644 0 0
+file /usr/share/perl/5.10.0/Carp.pm /usr/share/perl/5.10.0/Carp.pm 0644 0 0
+file /usr/share/perl/5.10.0/Exporter.pm /usr/share/perl/5.10.0/Exporter.pm 0644 0 0
+file /usr/share/perl/5.10.0/SelectSaver.pm /usr/share/perl/5.10.0/SelectSaver.pm 0644 0 0
+file /usr/share/perl/5.10.0/bytes_heavy.pl /usr/share/perl/5.10.0/bytes_heavy.pl 0644 0 0
+file /usr/share/perl/5.10.0/FileHandle.pm /usr/share/perl/5.10.0/FileHandle.pm 0644 0 0
+file /usr/share/perl/5.10.0/attributes.pm /usr/share/perl/5.10.0/attributes.pm 0644 0 0
+file /usr/share/perl/5.10.0/bytes.pm /usr/share/perl/5.10.0/bytes.pm 0644 0 0
+dir /usr/share/perl/5.10.0/warnings 0755 0 0
+file /usr/share/perl/5.10.0/warnings/register.pm /usr/share/perl/5.10.0/warnings/register.pm 0644 0 0
+file /usr/share/perl/5.10.0/utf8_heavy.pl /usr/share/perl/5.10.0/utf8_heavy.pl 0644 0 0
+file /usr/share/perl/5.10.0/vars.pm /usr/share/perl/5.10.0/vars.pm 0644 0 0
+dir /usr/share/perl/5.10.0/unicore 0755 0 0
+dir /usr/share/perl/5.10.0/unicore/lib 0755 0 0
+dir /usr/share/perl/5.10.0/unicore/lib/bc 0755 0 0
+file /usr/share/perl/5.10.0/unicore/lib/bc/B.pl /usr/share/perl/5.10.0/unicore/lib/bc/B.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/bc/L.pl /usr/share/perl/5.10.0/unicore/lib/bc/L.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/bc/R.pl /usr/share/perl/5.10.0/unicore/lib/bc/R.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/bc/S.pl /usr/share/perl/5.10.0/unicore/lib/bc/S.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/bc/AL.pl /usr/share/perl/5.10.0/unicore/lib/bc/AL.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/bc/AN.pl /usr/share/perl/5.10.0/unicore/lib/bc/AN.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/bc/BN.pl /usr/share/perl/5.10.0/unicore/lib/bc/BN.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/bc/CS.pl /usr/share/perl/5.10.0/unicore/lib/bc/CS.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/bc/EN.pl /usr/share/perl/5.10.0/unicore/lib/bc/EN.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/bc/ES.pl /usr/share/perl/5.10.0/unicore/lib/bc/ES.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/bc/ET.pl /usr/share/perl/5.10.0/unicore/lib/bc/ET.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/bc/ON.pl /usr/share/perl/5.10.0/unicore/lib/bc/ON.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/bc/LRE.pl /usr/share/perl/5.10.0/unicore/lib/bc/LRE.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/bc/LRO.pl /usr/share/perl/5.10.0/unicore/lib/bc/LRO.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/bc/WS.pl /usr/share/perl/5.10.0/unicore/lib/bc/WS.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/bc/NSM.pl /usr/share/perl/5.10.0/unicore/lib/bc/NSM.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/bc/PDF.pl /usr/share/perl/5.10.0/unicore/lib/bc/PDF.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/bc/RLE.pl /usr/share/perl/5.10.0/unicore/lib/bc/RLE.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/bc/RLO.pl /usr/share/perl/5.10.0/unicore/lib/bc/RLO.pl 0644 0 0
+dir /usr/share/perl/5.10.0/unicore/lib/ea 0755 0 0
+file /usr/share/perl/5.10.0/unicore/lib/ea/A.pl /usr/share/perl/5.10.0/unicore/lib/ea/A.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/ea/F.pl /usr/share/perl/5.10.0/unicore/lib/ea/F.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/ea/H.pl /usr/share/perl/5.10.0/unicore/lib/ea/H.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/ea/N.pl /usr/share/perl/5.10.0/unicore/lib/ea/N.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/ea/W.pl /usr/share/perl/5.10.0/unicore/lib/ea/W.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/ea/Na.pl /usr/share/perl/5.10.0/unicore/lib/ea/Na.pl 0644 0 0
+dir /usr/share/perl/5.10.0/unicore/lib/dt 0755 0 0
+file /usr/share/perl/5.10.0/unicore/lib/dt/nb.pl /usr/share/perl/5.10.0/unicore/lib/dt/nb.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/dt/can.pl /usr/share/perl/5.10.0/unicore/lib/dt/can.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/dt/com.pl /usr/share/perl/5.10.0/unicore/lib/dt/com.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/dt/font.pl /usr/share/perl/5.10.0/unicore/lib/dt/font.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/dt/enc.pl /usr/share/perl/5.10.0/unicore/lib/dt/enc.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/dt/fin.pl /usr/share/perl/5.10.0/unicore/lib/dt/fin.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/dt/fra.pl /usr/share/perl/5.10.0/unicore/lib/dt/fra.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/dt/iso.pl /usr/share/perl/5.10.0/unicore/lib/dt/iso.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/dt/med.pl /usr/share/perl/5.10.0/unicore/lib/dt/med.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/dt/nar.pl /usr/share/perl/5.10.0/unicore/lib/dt/nar.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/dt/sml.pl /usr/share/perl/5.10.0/unicore/lib/dt/sml.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/dt/sqr.pl /usr/share/perl/5.10.0/unicore/lib/dt/sqr.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/dt/sub.pl /usr/share/perl/5.10.0/unicore/lib/dt/sub.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/dt/sup.pl /usr/share/perl/5.10.0/unicore/lib/dt/sup.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/dt/vert.pl /usr/share/perl/5.10.0/unicore/lib/dt/vert.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/dt/wide.pl /usr/share/perl/5.10.0/unicore/lib/dt/wide.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/dt/init.pl /usr/share/perl/5.10.0/unicore/lib/dt/init.pl 0644 0 0
+dir /usr/share/perl/5.10.0/unicore/lib/jt 0755 0 0
+file /usr/share/perl/5.10.0/unicore/lib/jt/C.pl /usr/share/perl/5.10.0/unicore/lib/jt/C.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/jt/D.pl /usr/share/perl/5.10.0/unicore/lib/jt/D.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/jt/R.pl /usr/share/perl/5.10.0/unicore/lib/jt/R.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/jt/U.pl /usr/share/perl/5.10.0/unicore/lib/jt/U.pl 0644 0 0
+dir /usr/share/perl/5.10.0/unicore/lib/lb 0755 0 0
+file /usr/share/perl/5.10.0/unicore/lib/lb/B2.pl /usr/share/perl/5.10.0/unicore/lib/lb/B2.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/lb/AI.pl /usr/share/perl/5.10.0/unicore/lib/lb/AI.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/lb/AL.pl /usr/share/perl/5.10.0/unicore/lib/lb/AL.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/lb/BA.pl /usr/share/perl/5.10.0/unicore/lib/lb/BA.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/lb/BB.pl /usr/share/perl/5.10.0/unicore/lib/lb/BB.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/lb/BK.pl /usr/share/perl/5.10.0/unicore/lib/lb/BK.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/lb/CB.pl /usr/share/perl/5.10.0/unicore/lib/lb/CB.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/lb/CL.pl /usr/share/perl/5.10.0/unicore/lib/lb/CL.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/lb/CM.pl /usr/share/perl/5.10.0/unicore/lib/lb/CM.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/lb/CR.pl /usr/share/perl/5.10.0/unicore/lib/lb/CR.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/lb/H2.pl /usr/share/perl/5.10.0/unicore/lib/lb/H2.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/lb/H3.pl /usr/share/perl/5.10.0/unicore/lib/lb/H3.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/lb/EX.pl /usr/share/perl/5.10.0/unicore/lib/lb/EX.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/lb/GL.pl /usr/share/perl/5.10.0/unicore/lib/lb/GL.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/lb/ID.pl /usr/share/perl/5.10.0/unicore/lib/lb/ID.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/lb/IN.pl /usr/share/perl/5.10.0/unicore/lib/lb/IN.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/lb/HY.pl /usr/share/perl/5.10.0/unicore/lib/lb/HY.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/lb/IS.pl /usr/share/perl/5.10.0/unicore/lib/lb/IS.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/lb/JL.pl /usr/share/perl/5.10.0/unicore/lib/lb/JL.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/lb/JT.pl /usr/share/perl/5.10.0/unicore/lib/lb/JT.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/lb/JV.pl /usr/share/perl/5.10.0/unicore/lib/lb/JV.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/lb/LF.pl /usr/share/perl/5.10.0/unicore/lib/lb/LF.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/lb/NL.pl /usr/share/perl/5.10.0/unicore/lib/lb/NL.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/lb/NS.pl /usr/share/perl/5.10.0/unicore/lib/lb/NS.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/lb/NU.pl /usr/share/perl/5.10.0/unicore/lib/lb/NU.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/lb/OP.pl /usr/share/perl/5.10.0/unicore/lib/lb/OP.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/lb/PO.pl /usr/share/perl/5.10.0/unicore/lib/lb/PO.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/lb/PR.pl /usr/share/perl/5.10.0/unicore/lib/lb/PR.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/lb/QU.pl /usr/share/perl/5.10.0/unicore/lib/lb/QU.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/lb/SA.pl /usr/share/perl/5.10.0/unicore/lib/lb/SA.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/lb/SG.pl /usr/share/perl/5.10.0/unicore/lib/lb/SG.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/lb/SP.pl /usr/share/perl/5.10.0/unicore/lib/lb/SP.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/lb/SY.pl /usr/share/perl/5.10.0/unicore/lib/lb/SY.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/lb/WJ.pl /usr/share/perl/5.10.0/unicore/lib/lb/WJ.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/lb/XX.pl /usr/share/perl/5.10.0/unicore/lib/lb/XX.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/lb/ZW.pl /usr/share/perl/5.10.0/unicore/lib/lb/ZW.pl 0644 0 0
+dir /usr/share/perl/5.10.0/unicore/lib/nt 0755 0 0
+file /usr/share/perl/5.10.0/unicore/lib/nt/De.pl /usr/share/perl/5.10.0/unicore/lib/nt/De.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/nt/Di.pl /usr/share/perl/5.10.0/unicore/lib/nt/Di.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/nt/Nu.pl /usr/share/perl/5.10.0/unicore/lib/nt/Nu.pl 0644 0 0
+dir /usr/share/perl/5.10.0/unicore/lib/ccc 0755 0 0
+file /usr/share/perl/5.10.0/unicore/lib/ccc/A.pl /usr/share/perl/5.10.0/unicore/lib/ccc/A.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/ccc/B.pl /usr/share/perl/5.10.0/unicore/lib/ccc/B.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/ccc/L.pl /usr/share/perl/5.10.0/unicore/lib/ccc/L.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/ccc/R.pl /usr/share/perl/5.10.0/unicore/lib/ccc/R.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/ccc/AL.pl /usr/share/perl/5.10.0/unicore/lib/ccc/AL.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/ccc/AR.pl /usr/share/perl/5.10.0/unicore/lib/ccc/AR.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/ccc/BL.pl /usr/share/perl/5.10.0/unicore/lib/ccc/BL.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/ccc/BR.pl /usr/share/perl/5.10.0/unicore/lib/ccc/BR.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/ccc/DA.pl /usr/share/perl/5.10.0/unicore/lib/ccc/DA.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/ccc/DB.pl /usr/share/perl/5.10.0/unicore/lib/ccc/DB.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/ccc/IS.pl /usr/share/perl/5.10.0/unicore/lib/ccc/IS.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/ccc/KV.pl /usr/share/perl/5.10.0/unicore/lib/ccc/KV.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/ccc/NK.pl /usr/share/perl/5.10.0/unicore/lib/ccc/NK.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/ccc/NR.pl /usr/share/perl/5.10.0/unicore/lib/ccc/NR.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/ccc/OV.pl /usr/share/perl/5.10.0/unicore/lib/ccc/OV.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/ccc/VR.pl /usr/share/perl/5.10.0/unicore/lib/ccc/VR.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/ccc/ATAR.pl /usr/share/perl/5.10.0/unicore/lib/ccc/ATAR.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/ccc/ATBL.pl /usr/share/perl/5.10.0/unicore/lib/ccc/ATBL.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/ccc/ATB.pl /usr/share/perl/5.10.0/unicore/lib/ccc/ATB.pl 0644 0 0
+dir /usr/share/perl/5.10.0/unicore/lib/hst 0755 0 0
+file /usr/share/perl/5.10.0/unicore/lib/hst/L.pl /usr/share/perl/5.10.0/unicore/lib/hst/L.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/hst/T.pl /usr/share/perl/5.10.0/unicore/lib/hst/T.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/hst/V.pl /usr/share/perl/5.10.0/unicore/lib/hst/V.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/hst/LV.pl /usr/share/perl/5.10.0/unicore/lib/hst/LV.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/hst/LVT.pl /usr/share/perl/5.10.0/unicore/lib/hst/LVT.pl 0644 0 0
+dir /usr/share/perl/5.10.0/unicore/lib/gc_sc 0755 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Ogam.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Ogam.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/JoinCont.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/JoinCont.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Any.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Any.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/C.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/C.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/L.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/L.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/M.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/M.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/N.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/N.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/P.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/P.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/S.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/S.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Z.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Z.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InTifina.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InTifina.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Hira.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Hira.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Dep.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Dep.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Gujr.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Gujr.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Dia.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Dia.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/_CanonDC.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/_CanonDC.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Guru.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Guru.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Bali.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Bali.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/AsciiHex.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/AsciiHex.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/PatWS.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/PatWS.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InSyloti.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InSyloti.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InOsmany.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InOsmany.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Ext.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Ext.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Hyphen.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Hyphen.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCjkCo2.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCjkCo2.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCjkCo3.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCjkCo3.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCjkCo4.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCjkCo4.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Hex.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Hex.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCjkCom.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCjkCom.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Cc.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Cc.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Cf.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Cf.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Cn.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Cn.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Co.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Co.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/OldPersi.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/OldPersi.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Cs.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Cs.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Ideo.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Ideo.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InMusica.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InMusica.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/LC.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/LC.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Beng.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Beng.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Ll.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Ll.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Lm.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Lm.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Mc.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Mc.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Lo.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Lo.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Me.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Me.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Lt.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Lt.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Lu.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Lu.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Mn.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Mn.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Nd.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Nd.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Nl.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Nl.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/No.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/No.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Pc.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Pc.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Pd.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Pd.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/SD.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/SD.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Pe.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Pe.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Pf.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Pf.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Pi.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Pi.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Po.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Po.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Ps.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Ps.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/LOE.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/LOE.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Sc.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Sc.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InBugine.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InBugine.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Sk.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Sk.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Arab.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Arab.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Sm.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Sm.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/So.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/So.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCounti.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCounti.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/VS.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/VS.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InVaria2.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InVaria2.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InKanbun.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InKanbun.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Cntrl.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Cntrl.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Zl.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Zl.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Zp.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Zp.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Zs.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Zs.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InVariat.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InVariat.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Quotatio.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Quotatio.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Ideograp.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Ideograp.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/PhagsPa.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/PhagsPa.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Armn.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Armn.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/ODI.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/ODI.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InSupers.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InSupers.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InGothic.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InGothic.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/NewTaiLu.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/NewTaiLu.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InLao.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InLao.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Canadian.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Canadian.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InSmallF.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InSmallF.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InLowSur.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InLowSur.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InByzant.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InByzant.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InContro.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InContro.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InOldIta.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InOldIta.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InLetter.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InLetter.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Osma.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Osma.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Orya.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Orya.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InHalfwi.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InHalfwi.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InKhmerS.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InKhmerS.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Phnx.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Phnx.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InKangxi.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InKangxi.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InMathe2.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InMathe2.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InNko.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InNko.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InMathem.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InMathem.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Upper.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Upper.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InHighPr.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InHighPr.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InLimbu.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InLimbu.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InHighSu.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InHighSu.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Qaai.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Qaai.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/OMath.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/OMath.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/_CaseIgn.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/_CaseIgn.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InModifi.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InModifi.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Bopo.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Bopo.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/NChar.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/NChar.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InOldPer.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InOldPer.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InKannad.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InKannad.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/SpacePer.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/SpacePer.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InHebrew.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InHebrew.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Brai.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Brai.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InGenera.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InGenera.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InSuppl2.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InSuppl2.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InSuppl3.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InSuppl3.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InSuppl4.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InSuppl4.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InSuppl5.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InSuppl5.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InSuppl6.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InSuppl6.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCjkRad.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCjkRad.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InSupple.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InSupple.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/IdStart.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/IdStart.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Cher.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Cher.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/JoinC.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/JoinC.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InTagban.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InTagban.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InTagalo.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InTagalo.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InGujara.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InGujara.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/XDigit.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/XDigit.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/TaiLe.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/TaiLe.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InOriya.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InOriya.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/ASCII.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/ASCII.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Word.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Word.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InDesere.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InDesere.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InShavia.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InShavia.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Alphabet.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Alphabet.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Bugi.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Bugi.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Buhd.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Buhd.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InYiSyll.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InYiSyll.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCjkStr.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCjkStr.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/OtherAlp.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/OtherAlp.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InNewTai.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InNewTai.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCjkSym.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCjkSym.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCjkUn2.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCjkUn2.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCjkUn3.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCjkUn3.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCjkUni.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCjkUni.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/UnifiedI.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/UnifiedI.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/IdsBinar.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/IdsBinar.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/OtherDef.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/OtherDef.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Dash.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Dash.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/UIdeo.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/UIdeo.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Kana.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Kana.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InAlphab.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InAlphab.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InEthio2.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InEthio2.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InEthio3.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InEthio3.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InEthiop.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InEthiop.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Copt.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Copt.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/SylotiNa.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/SylotiNa.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InOptica.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InOptica.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCurren.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCurren.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InTibeta.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InTibeta.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/HorizSpa.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/HorizSpa.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/OtherGra.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/OtherGra.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Cprt.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Cprt.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Deva.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Deva.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/OtherIdC.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/OtherIdC.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/OtherIdS.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/OtherIdS.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InPhagsP.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InPhagsP.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InPhoeni.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InPhoeni.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Print.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Print.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InBoxDra.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InBoxDra.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Khar.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Khar.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InBengal.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InBengal.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Deprecat.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Deprecat.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Nonchara.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Nonchara.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InYijing.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InYijing.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Khmr.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Khmr.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InBraill.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InBraill.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/VertSpac.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/VertSpac.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InArrows.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InArrows.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCoptic.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCoptic.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Assigned.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Assigned.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/IdsTrina.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/IdsTrina.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/OtherMat.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/OtherMat.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/OtherLow.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/OtherLow.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/OUpper.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/OUpper.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InTaiXua.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InTaiXua.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InLinea2.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InLinea2.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InKhmer.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InKhmer.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InHangu2.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InHangu2.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InHangu3.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InHangu3.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InLinear.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InLinear.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InHangul.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InHangul.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Yiii.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Yiii.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCyprio.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCyprio.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Xsux.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Xsux.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Laoo.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Laoo.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InGeomet.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InGeomet.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InSpecia.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InSpecia.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Latn.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Latn.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InPhone2.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InPhone2.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Knda.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Knda.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/QMark.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/QMark.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Cyrl.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Cyrl.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InPhonet.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InPhonet.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Radical.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Radical.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Alnum.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Alnum.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/AHex.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/AHex.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/OIDC.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/OIDC.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/OIDS.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/OIDS.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InGeorg2.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InGeorg2.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Alpha.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Alpha.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/BidiC.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/BidiC.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InArmeni.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InArmeni.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InGeorgi.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InGeorgi.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InGlagol.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InGlagol.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/OtherUpp.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/OtherUpp.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Dsrt.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Dsrt.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InSinhal.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InSinhal.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InThaana.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InThaana.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Limb.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Limb.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Shaw.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Shaw.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InKharos.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InKharos.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/PatSyn.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/PatSyn.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InIdeogr.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InIdeogr.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InGurmuk.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InGurmuk.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Sinh.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Sinh.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCunei2.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCunei2.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/SoftDott.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/SoftDott.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Title.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Title.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCuneif.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCuneif.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InLatin1.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InLatin1.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InLatin2.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InLatin2.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InLatin3.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InLatin3.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InLatin4.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InLatin4.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InLatin5.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InLatin5.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InOgham.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InOgham.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/IDSB.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/IDSB.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InLatinE.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InLatinE.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/IDST.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/IDST.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Runr.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Runr.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCherok.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCherok.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Math.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Math.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InHanuno.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InHanuno.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InTelugu.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InTelugu.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Lower.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Lower.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Tagb.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Tagb.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InRunic.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InRunic.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InVertic.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InVertic.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/IdContin.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/IdContin.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCyril2.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCyril2.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InAncie2.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InAncie2.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InMongol.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InMongol.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Taml.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Taml.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCyrill.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCyrill.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InAncien.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InAncien.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InDevana.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InDevana.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Uppercas.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Uppercas.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InNumber.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InNumber.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/WSpace.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/WSpace.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InBlockE.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InBlockE.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Extender.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Extender.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Telu.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Telu.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Ethi.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Ethi.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Term.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Term.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Tfng.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Tfng.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InHiraga.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InHiraga.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Thaa.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Thaa.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Tglg.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Tglg.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Thai.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Thai.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/OGrExt.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/OGrExt.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InMisce2.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InMisce2.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InMisce3.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InMisce3.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InMisce4.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InMisce4.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InMisce5.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InMisce5.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Diacriti.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Diacriti.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InMiscel.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InMiscel.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Tibt.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Tibt.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCombi2.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCombi2.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCombi3.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCombi3.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCombi4.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCombi4.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/OldItali.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/OldItali.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InIpaExt.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InIpaExt.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCombin.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InCombin.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InArabi2.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InArabi2.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InArabi3.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InArabi3.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InArabi4.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InArabi4.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InArabic.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InArabic.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/BidiCont.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/BidiCont.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/STerm.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/STerm.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InUgarit.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InUgarit.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Dash2.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Dash2.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InBaline.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InBaline.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Space.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Space.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Mlym.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Mlym.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InTags.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InTags.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InBasicL.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InBasicL.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Digit.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Digit.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/HexDigit.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/HexDigit.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InGreekA.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InGreekA.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InGreekE.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InGreekE.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InBopom2.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InBopom2.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InPrivat.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InPrivat.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InAegean.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InAegean.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InBopomo.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InBopomo.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/PatternS.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/PatternS.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/PatternW.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/PatternW.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Geor.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Geor.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Mong.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Mong.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/LogicalO.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/LogicalO.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Lowercas.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Lowercas.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InYiRadi.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InYiRadi.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/OAlpha.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/OAlpha.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Graph.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Graph.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InTaiLe.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InTaiLe.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InSyriac.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InSyriac.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Syrc.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Syrc.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Hyphen2.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Hyphen2.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Terminal.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Terminal.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/DefaultI.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/DefaultI.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Zyyy.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Zyyy.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Ugar.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Ugar.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InThai.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InThai.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Variatio.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Variatio.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/LinearB.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/LinearB.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Glag.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Glag.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Punct.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Punct.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Hang.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Hang.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Hani.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Hani.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Hano.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Hano.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Radical2.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Radical2.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Nkoo.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Nkoo.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InSpacin.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InSpacin.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/OLower.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/OLower.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InBuhid.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InBuhid.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InTamil.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InTamil.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InMyanma.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InMyanma.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InMalaya.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InMalaya.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/_CombAbo.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/_CombAbo.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InDingba.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InDingba.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Hebr.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Hebr.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Mymr.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Mymr.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InKatak2.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InKatak2.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Goth.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Goth.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InUnifie.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InUnifie.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Sterm2.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Sterm2.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InKataka.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InKataka.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Blank.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Blank.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/WhiteSpa.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/WhiteSpa.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/Grek.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/Grek.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InEnclo2.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InEnclo2.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/lib/gc_sc/InEnclos.pl /usr/share/perl/5.10.0/unicore/lib/gc_sc/InEnclos.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/PVA.pl /usr/share/perl/5.10.0/unicore/PVA.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/Exact.pl /usr/share/perl/5.10.0/unicore/Exact.pl 0644 0 0
+file /usr/share/perl/5.10.0/unicore/Canonical.pl /usr/share/perl/5.10.0/unicore/Canonical.pl 0644 0 0
+file /usr/share/perl/5.10.0/locale.pm /usr/share/perl/5.10.0/locale.pm 0644 0 0
+dir /usr/share/perl/5.10.0/Exporter 0755 0 0
+file /usr/share/perl/5.10.0/Exporter/Heavy.pm /usr/share/perl/5.10.0/Exporter/Heavy.pm 0644 0 0
+file /usr/share/perl/5.10.0/utf8.pm /usr/share/perl/5.10.0/utf8.pm 0644 0 0
+file /usr/share/perl/5.10.0/base.pm /usr/share/perl/5.10.0/base.pm 0644 0 0
+file /usr/share/perl/5.10.0/integer.pm /usr/share/perl/5.10.0/integer.pm 0644 0 0
+file /usr/share/perl/5.10.0/AutoLoader.pm /usr/share/perl/5.10.0/AutoLoader.pm 0644 0 0
+file /usr/share/perl/5.10.0/Symbol.pm /usr/share/perl/5.10.0/Symbol.pm 0644 0 0
+slink /usr/lib/perl/5.10 /usr/lib/perl/5.10.0 0777 0 0
+slink /usr/share/perl/5.10 /usr/share/perl/5.10.0 0777 0 0
+# perl-modules
+dir /usr/share/perl/5.10.0/Math 0755 0 0
+file /usr/share/perl/5.10.0/Math/Complex.pm /usr/share/perl/5.10.0/Math/Complex.pm 0644 0 0
+file /usr/share/perl/5.10.0/Math/Trig.pm /usr/share/perl/5.10.0/Math/Trig.pm 0644 0 0
+# vi: set sw=4 ts=4 paste:

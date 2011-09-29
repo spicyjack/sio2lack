@@ -1,0 +1,20 @@
+[30;41m
+               :::    ::::::           :::     :::::::: :::    :::              
+              :+:    :+::+:         :+: :+:  :+:    :+::+:   :+:                
+              +:+  +:+ +:+        +:+   +:+ +:+       +:+  +:+                  
+              +#++:+  +#+       +#++:++#++:+#+       +#++:++                    
+            +#+  +#+ +#+       +#+     +#++#+       +#+  +#+                    
+          #+#    #+##+#       #+#     #+##+#    #+##+#   #+#                    
+         ###    ################     ### ######## ###    ###                    
+[31;40m
+         [1;36;44mLinux Appliance Construction Kit (XWindows version)[0;37;40m
+         [1;36;44mhttp://code.google.com/p/lack/ | <linuxack@googlegroups.com>[0;37;40m
+
+[1;33;40mRelease:[37;40m :RELEASE_VER: (Kernel :KERNEL_VER:)
+
+Today is: \d; You are viewing \l 
+
+Account info: [34;40m
+u: root               p: Disabled; use SUDO from 'lack' user account
+u: lack               p: :LACK_PASS:
+[0;37;40m
