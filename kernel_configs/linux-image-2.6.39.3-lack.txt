@@ -1570,11 +1570,4 @@ file /lib/modules/2.6.39.3-lack/updates/loop_twofish.ko /lib/modules/2.6.39.3-la
 file /lib/modules/2.6.39.3-lack/updates/loop_blowfish.ko /lib/modules/2.6.39.3-lack/updates/loop_blowfish.ko 644 0 0
 file /lib/modules/2.6.39.3-lack/updates/loop.ko /lib/modules/2.6.39.3-lack/updates/loop.ko 644 0 0
 file /lib/modules/2.6.39.3-lack/updates/loop_serpent.ko /lib/modules/2.6.39.3-lack/updates/loop_serpent.ko 644 0 0
-# ndiswrapper-modules-2.6.39.3-lack - 1.56-svn-2011.202.0+2011.205.1
-dir /usr 755 0 0
-dir /usr/share 755 0 0
-dir /lib 755 0 0
-dir /lib/modules/2.6.39.3-lack 755 0 0
-dir /lib/modules/2.6.39.3-lack/misc 755 0 0
-file /lib/modules/2.6.39.3-lack/misc/ndiswrapper.ko /lib/modules/2.6.39.3-lack/misc/ndiswrapper.ko 644 0 0
 # vi: set shiftwidth=4 tabstop=4 paste:

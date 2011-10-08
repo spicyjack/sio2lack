@@ -5,7 +5,7 @@
 # home directories
 # moved to _basedirs 07Jul2010
 # make sure you get busybox in each project's specific initramfs file list now
-file /bin/busybox :TEMP_DIR:/busybox-1.18.5-x86 0755 0 0
+file /bin/busybox :TEMP_DIR:/busybox-1.19.2-x86 0755 0 0
 # busybox getopt hides in /bin
 slink /usr/bin/getopt /bin/getopt 0755 0 0
 #dir /home 0755 0 0
@@ -14,8 +14,8 @@ file /home/lack/.gtkrc-2.0 :PROJECT_DIR:/etcfiles/lack.gtkrc-2.0 644 1000 1000
 dir /home/nobody 0755 65535 65535
 # /etc
 # generated files
-file /etc/issue.xlack :TEMP_DIR:/issue.xlack 0644 0 0
-file /etc/issue.nogetty :TEMP_DIR:/issue.xlack.nogetty 0644 0 0
+file /etc/issue.sio2lack :TEMP_DIR:/issue.sio2lack 0644 0 0
+file /etc/issue.nogetty :TEMP_DIR:/issue.sio2lack.nogetty 0644 0 0
 slink /etc/issue /etc/issue.nogetty 0644 0 0
 file /etc/hostname :TEMP_DIR:/hostname 0644 0 0
 # files sourced from lack common directory
@@ -26,7 +26,7 @@ file /etc/sudoers :BUILD_BASE:/common/etcfiles/sudoers 0440 0 0
 #file /etc/X11/xorg.conf :PROJECT_DIR:/etcfiles/xorg.conf 644 0 0
 file /etc/X11/xorg.conf :BUILD_BASE:/common/etcfiles/xorg.conf 644 0 0
 file /etc/X11/Xwrapper.config :BUILD_BASE:/common/etcfiles/Xwrapper.config 600 0 0
-# files sourced from the xlack sub-project directory
+# files sourced from the sio2lack sub-project directory
 file /etc/inittab :PROJECT_DIR:/etcfiles/inittab 0644 0 0
 file /etc/modules :PROJECT_DIR:/etcfiles/modules 0644 0 0
 file /etc/profile :PROJECT_DIR:/etcfiles/profile 0644 0 0

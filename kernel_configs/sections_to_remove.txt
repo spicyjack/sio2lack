@@ -16,7 +16,7 @@ kernel/drivers/cpufreq
 kernel/drivers/crypto
 kernel/drivers/dca
 kernel/drivers/dma
-kernel/drivers/firewire
+#kernel/drivers/firewire
 kernel/drivers/gpu
 kernel/drivers/hwmon
 kernel/drivers/i2c
@@ -26,7 +26,9 @@ kernel/drivers/infiniband
 kernel/drivers/input/gameport
 kernel/drivers/input/joystick
 kernel/drivers/input/misc
-kernel/drivers/input/serio
+#kernel/drivers/input/serio
+kernel/drivers/input/tablet
+kernel/drivers/input/touchscreen
 kernel/drivers/isdn
 kernel/drivers/md
 kernel/drivers/media
@@ -36,7 +38,13 @@ kernel/drivers/misc
 kernel/drivers/mtd
 kernel/drivers/net/appletalk
 kernel/drivers/net/arcnet
-kernel/drivers/net/hamradio
+kernel/drivers/net/atl1c
+kernel/drivers/net/atl1e
+kernel/drivers/net/atlx
+kernel/drivers/net/benet
+kernel/drivers/net/bna
+kernel/drivers/net/bnx2x
+kernen/drivers/net/hamradio
 kernel/drivers/net/irda
 kernel/drivers/net/tokenring
 kernel/drivers/parport
