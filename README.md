@@ -1,3 +1,8 @@
+# NOTE #
+
+This project has been set to "Archived" status as of 22Nov2021.  Please don't
+expect any new work on this project in the future.
+
 ## What is this? ##
 
 An Atari Serial I/O (SIO) [LACK](http://code.google.com/p/lack) appliance, or
